@@ -1,6 +1,7 @@
 {
   "name": "@hexlet/code",
   "version": "1.0.0",
+  "type": "module",
   "description": "[![Actions Status](https://github.com/eleder89/fullstack-javascript-project-98/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/eleder89/fullstack-javascript-project-98/actions)",
   "main": "index.js",
   "scripts": {
@@ -8,8 +9,10 @@
   },
   "author": "",
   "license": "ISC",
-  "type": "module",
-  "bin":  {
+  "bin": {
     "brain-games": "bin/brain-games.js"
+  },
+  "dependencies": {
+    "readline-sync": "^1.4.10"
   }
 }
