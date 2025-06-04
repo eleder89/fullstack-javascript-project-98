@@ -33,4 +33,6 @@ while (count > 0) {
     }
 };
 
-console.log(`¡Felicidades ${name}, has ganado!`);
+if (count === 0) {
+    console.log(`¡Felicidades ${name}, has ganado!`);
+}
