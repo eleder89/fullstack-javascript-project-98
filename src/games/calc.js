@@ -13,12 +13,11 @@ const brainCalc = () => {
   let count = 3;
 
   while (count > 0) {
+    const value1 = randomNumber(1, 99);
 
-  const value1 = randomNumber(1, 99);
+    const value2 = randomNumber(1, 99);
 
-  const value2 = randomNumber(1, 99);
-
-  let operador;
+    let operador;
 
     switch (randomNumber(1, 3)) {
       case 1:

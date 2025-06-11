@@ -10,4 +10,26 @@ const check = (data) => {
   return result;
 };
 
-export { check, randomNumber };
+const euclidian = (value1, value2) => {
+  let a = value1;
+
+  let b = value2;
+
+  let r = 0;
+
+  let result = 0;
+
+  do {
+    r = a % b;
+
+    a = b;
+
+    b = r;
+
+    result = b;
+  } while (r === 0);
+
+  return result;
+};
+
+export { check, randomNumber, euclidian };
