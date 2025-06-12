@@ -6,3 +6,5 @@
 [video de instalacion y prueba de brain.even](https://asciinema.org/a/nL8lv7FZugrBCvstj0Uo2xDbe)
 
 [video prueba de brain-calc](https://asciinema.org/a/CqtePHBigVUjqYF0XMY6BAWlJ)
+
+[video de prueba de brain-gcd](https://asciinema.org/a/Mk7P8MNA1s2WPnJVVMcVXQnMG)
