@@ -25,7 +25,6 @@ const calcMcd = () => {
 
     if (verifing) {
       console.log(check(verifing));
-      i -= 1;
     } else {
       console.log(`${answer}${check(verifing)}${rigthAnswer}`);
       console.log(`Imntentalo otra vez ${name}`);

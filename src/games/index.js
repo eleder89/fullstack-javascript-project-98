@@ -24,10 +24,10 @@ const euclidian = (value1, value2) => {
 
     a = b;
 
-    b = r;
-
     result = b;
-  } while (r === 0);
+
+    b = r;
+  } while (r !== 0);
 
   return result;
 };
