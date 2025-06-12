@@ -10,7 +10,9 @@ const calcMcd = () => {
 
   console.log('Calcula el máximo común divisor de los numeros dados.');
 
-  for (let i = 3; i > 0; i -= 1) {
+  let count = 3;
+
+  while (count > 0) {
     const value1 = randomNumber(1, 99);
 
     const value2 = randomNumber(1, 99);
@@ -25,15 +27,16 @@ const calcMcd = () => {
 
     if (verifing) {
       console.log(check(verifing));
+      count -= 1;
     } else {
       console.log(`${answer}${check(verifing)}${rigthAnswer}`);
       console.log(`Imntentalo otra vez ${name}`);
       break;
     }
+  }
 
-    if (i === 0) {
-      console.log(`¡Felicidades ${name} has ganado!`);
-    }
+  if (count === 0) {
+    console.log(`¡Felicidades ${name} has ganado!`);
   }
 };
 
