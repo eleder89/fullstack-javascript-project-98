@@ -8,3 +8,7 @@
 [video prueba de brain-calc](https://asciinema.org/a/CqtePHBigVUjqYF0XMY6BAWlJ)
 
 [video de prueba de brain-gcd](https://asciinema.org/a/Mk7P8MNA1s2WPnJVVMcVXQnMG)
+
+[video de prueba de brain-progression](https://asciinema.org/a/DXhpDjIMF67BJev0g7Iy2C0YO)
+
+[video de prueba de brain-prime](https://asciinema.org/a/SyrSxAgT7ZgQVvx6lfmGsubdF)
