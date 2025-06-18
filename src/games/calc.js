@@ -1,12 +1,8 @@
 import readlineSync from 'readline-sync';
-import { check, randomNumber } from './index.js';
+import { welcome, closer, randomNumber } from './index.js';
 
 const brainCalc = () => {
-  console.log('¡Bienvenido a Brain Games!');
-
-  const name = readlineSync.question('¿Cual es tu nombre?');
-
-  console.log(`¡Hola, ${name}!`);
+  const name = welcome();
 
   console.log('¿Cual es el resultado de la expresión?');
 
@@ -38,14 +34,14 @@ const brainCalc = () => {
 
     const answer = readlineSync.question('Respuesta:');
 
-    const verifing = eval(pregunta);
+    const rigthAnswer = eval(pregunta);
 
-    if (answer == verifing) {
-      console.log(check(true));
-      count -= 1;
-    } else {
-      console.log(`'${answer}'${check(false)}'${verifing}'`);
+    const verifing = answer == rigthAnswer;
+
+    if (closer(answer, verifing, rigthAnswer)) {
       break;
+    } else {
+      count -= 1;
     }
   }
   if (count === 0) {

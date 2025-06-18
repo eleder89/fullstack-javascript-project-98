@@ -1,12 +1,8 @@
 import readlineSync from 'readline-sync';
-import { check, randomNumber } from './index.js';
+import { welcome, closer, randomNumber } from './index.js';
 
 const brainEven = () => {
-  console.log('¡Bienvenido a Brain Games!');
-
-  const name = readlineSync.question('¿Cual es tu nombre?');
-
-  console.log(`¡Hola, ${name}!`);
+  const name = welcome();
 
   console.log("Responde 'yes' si el numero es par. Responde 'no' si es impar");
 
@@ -30,14 +26,12 @@ const brainEven = () => {
 
     const verifing = isEvenNumber(value, answer);
 
-    if (verifing) {
-      console.log(check(verifing));
-      count -= 1;
-    } else {
-      const rigthAnswer = value % 2 === 0 ? "'yes'" : "'no'";
-      console.log(`'${answer}'${check(verifing)}${rigthAnswer}`);
-      console.log(`Intentalo otra vez ${name}`);
+    const rigthAnswer = value % 2 === 0 ? "'yes'" : "'no'";
+
+    if (closer(answer, verifing, rigthAnswer)) {
       break;
+    } else {
+      count -= 1;
     }
   }
 

@@ -1,12 +1,10 @@
 import readlineSync from 'readline-sync';
-import { randomNumber, check, euclidian } from './index.js';
+import {
+  randomNumber, welcome, closer, euclidian,
+} from './index.js';
 
 const calcMcd = () => {
-  console.log('¡Bienvenido a Brain Games!');
-
-  const name = readlineSync.question('¿Cual es tu nombre?');
-
-  console.log(`¡Hola, ${name}!`);
+  const name = welcome();
 
   console.log('Calcula el máximo común divisor de los numeros dados.');
 
@@ -25,13 +23,10 @@ const calcMcd = () => {
 
     const verifing = rigthAnswer == answer;
 
-    if (verifing) {
-      console.log(check(verifing));
-      count -= 1;
-    } else {
-      console.log(`${answer}${check(verifing)}${rigthAnswer}`);
-      console.log(`Imntentalo otra vez ${name}`);
+    if (closer(answer, verifing, rigthAnswer)) {
       break;
+    } else {
+      count -= 1;
     }
   }
 

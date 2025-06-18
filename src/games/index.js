@@ -1,3 +1,5 @@
+import readlineSync from 'readline-sync';
+
 const randomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
 
 const check = (data) => {
@@ -32,4 +34,26 @@ const euclidian = (value1, value2) => {
   return result;
 };
 
-export { check, randomNumber, euclidian };
+const welcome = () => {
+  console.log('¡Bienvenido a Brain Games!');
+
+  const name = readlineSync.question('¿Cual es tu nombre?');
+
+  console.log(`¡Hola, ${name}!`);
+
+  return name;
+};
+
+const closer = (answer, verifing, rigthAnswer) => {
+  if (verifing) {
+    console.log(check(verifing));
+  } else {
+    console.log(`${answer}${check(verifing)}${rigthAnswer}\n ¡Intentalo otra vez!`);
+    return true;
+  }
+  return false;
+};
+
+export {
+  check, randomNumber, euclidian, closer, welcome,
+};

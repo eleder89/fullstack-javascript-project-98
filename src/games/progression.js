@@ -1,12 +1,8 @@
 import readlineSync from 'readline-sync';
-import { randomNumber, check } from './index.js';
+import { randomNumber, closer, welcome } from './index.js';
 
 const guesTheNumber = () => {
-  console.log('¡Bienvenido a Brain Games!');
-
-  const name = readlineSync.question('¿Cual es tu nombre?');
-
-  console.log(`¡Hola, ${name}!`);
+  const name = welcome();
 
   console.log('¿Qué numero falta en la progresión?');
 
@@ -41,18 +37,14 @@ const guesTheNumber = () => {
 
     const verifing = hideNumber == answer;
 
-    if (verifing) {
-      console.log(check(verifing));
-      count -= 1;
-    } else {
-      console.log(`${answer}${check(verifing)}${hideNumber}`);
-      console.log(`¡Intentalo otra vez ${name}`);
+    if (closer(answer, verifing, hideNumber)) {
       break;
+    } else {
+      count -= 1;
     }
   }
-
   if (count === 0) {
-    console.log(`¡Felicidades ${name} has ganado!`);
+    console.log(`Felicidades ${name} has ganado!`);
   }
 };
 
