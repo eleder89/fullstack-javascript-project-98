@@ -4,7 +4,7 @@ import { welcome, closer, randomNumber } from './index.js';
 const brainCalc = () => {
   const name = welcome();
 
-  console.log('¿Cual es el resultado de la expresión?');
+  console.log('¿Cuál es el resultado de la expresión?');
 
   let count = 3;
 
