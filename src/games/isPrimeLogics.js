@@ -3,7 +3,7 @@ import { randomNumber, welcome, closer } from './index.js';
 
 const brainPrime = () => {
   const name = welcome();
-  console.log('¡Responde "yes" si el numero presentado es primo, de lo contrario responde "no"');
+  console.log('Responde "yes" si el número dado es primo. De lo contrario, responde "no".');
 
   let count = 3;
 
