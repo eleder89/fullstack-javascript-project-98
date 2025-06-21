@@ -50,7 +50,7 @@ function closer(answer, verifing, rigthAnswer, name1) {
   if (verifing) {
     console.log(check(verifing));
   } else {
-    console.log(`${answer}${check(verifing)}${rigthAnswer}.\n ¡Intentemoslo de nuevo, ${name1}!`);
+    console.log(`${answer}${check(verifing)}${rigthAnswer}.\n ¡Intentémoslo de nuevo, ${name1}!`);
     return true;
   }
   return false;
