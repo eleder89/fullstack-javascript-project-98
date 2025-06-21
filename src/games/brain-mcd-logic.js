@@ -15,7 +15,7 @@ const calcMcd = () => {
 
     const value2 = randomNumber(1, 99);
 
-    console.log(`Pregunta: ${value1}, ${value2}`);
+    console.log(`Pregunta: ${value1} ${value2}`);
 
     const answer = readlineSync.question('Tu respuesta: ');
 
