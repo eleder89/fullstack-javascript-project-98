@@ -5,9 +5,9 @@ const randomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1) + 
 const check = (data) => {
   let result = '';
   if (data === true) {
-    result = '¡Respuesta correcta!';
+    result = '¡Correcto!';
   } else {
-    result = ' es una Respuesta Incorrecta, la respuesta correcta es ';
+    result = ' es una Respuesta Incorrecta ;(. La respuesta correcta era ';
   }
   return result;
 };
@@ -34,25 +34,27 @@ const euclidian = (value1, value2) => {
   return result;
 };
 
+const name = () => readlineSync.question('¿Cuál es tu nombre?');
+
 const welcome = () => {
   console.log('¡Bienvenido a Brain Games!');
 
-  const name = readlineSync.question('¿Cuál es tu nombre?');
+  const nombre = name();
 
-  console.log(`¡Hola, ${name}!`);
+  console.log(`¡Hola, ${nombre}!`);
 
-  return name;
+  return nombre;
 };
 
-const closer = (answer, verifing, rigthAnswer) => {
+function closer(answer, verifing, rigthAnswer, name1) {
   if (verifing) {
     console.log(check(verifing));
   } else {
-    console.log(`${answer}${check(verifing)}${rigthAnswer}\n ¡Intentalo otra vez!`);
+    console.log(`${answer}${check(verifing)}${rigthAnswer}.\n ¡Intentemoslo de nuevo, ${name1}!`);
     return true;
   }
   return false;
-};
+}
 
 export {
   check, randomNumber, euclidian, closer, welcome,

@@ -4,7 +4,7 @@ import { welcome, closer, randomNumber } from './index.js';
 const brainEven = () => {
   const name = welcome();
 
-  console.log("Responde 'yes' si el numero es par. Responde 'no' si es impar");
+  console.log('Responde "yes" si el número es par, de lo contrario responde "no".');
 
   const isEvenNumber = (value, answer) => {
     let result;
@@ -28,7 +28,7 @@ const brainEven = () => {
 
     const rigthAnswer = value % 2 === 0 ? "'yes'" : "'no'";
 
-    if (closer(answer, verifing, rigthAnswer)) {
+    if (closer(answer, verifing, rigthAnswer, name)) {
       break;
     } else {
       count -= 1;
@@ -36,7 +36,7 @@ const brainEven = () => {
   }
 
   if (count === 0) {
-    console.log(`¡Felicidades ${name}, has ganado!`);
+    console.log(`¡Felicidades ${name}!`);
   }
 };
 

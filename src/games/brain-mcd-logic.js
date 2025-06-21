@@ -6,7 +6,7 @@ import {
 const calcMcd = () => {
   const name = welcome();
 
-  console.log('Calcula el máximo común divisor de los numeros dados.');
+  console.log('Encuentra el máximo común divisor de los números dados.');
 
   let count = 3;
 
@@ -23,7 +23,7 @@ const calcMcd = () => {
 
     const verifing = rigthAnswer == answer;
 
-    if (closer(answer, verifing, rigthAnswer)) {
+    if (closer(answer, verifing, rigthAnswer, name)) {
       break;
     } else {
       count -= 1;
@@ -31,7 +31,7 @@ const calcMcd = () => {
   }
 
   if (count === 0) {
-    console.log(`¡Felicidades ${name} has ganado!`);
+    console.log(`¡Felicidades ${name}!`);
   }
 };
 

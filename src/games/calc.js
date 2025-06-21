@@ -38,14 +38,14 @@ const brainCalc = () => {
 
     const verifing = answer == rigthAnswer;
 
-    if (closer(answer, verifing, rigthAnswer)) {
+    if (closer(answer, verifing, rigthAnswer, name)) {
       break;
     } else {
       count -= 1;
     }
   }
   if (count === 0) {
-    console.log(`¡Felicidades ${name}, has ganado!`);
+    console.log(`¡Felicidades ${name}!`);
   }
 };
 

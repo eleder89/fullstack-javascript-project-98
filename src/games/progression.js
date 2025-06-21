@@ -37,14 +37,14 @@ const guesTheNumber = () => {
 
     const verifing = hideNumber == answer;
 
-    if (closer(answer, verifing, hideNumber)) {
+    if (closer(answer, verifing, hideNumber, name)) {
       break;
     } else {
       count -= 1;
     }
   }
   if (count === 0) {
-    console.log(`Felicidades ${name} has ganado!`);
+    console.log(`Felicidades ${name}!`);
   }
 };
 
