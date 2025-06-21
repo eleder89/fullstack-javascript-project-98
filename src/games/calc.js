@@ -32,7 +32,7 @@ const brainCalc = () => {
     const pregunta = `${value1} ${operador} ${value2}`;
     console.log(`Pregunta: ${pregunta}`);
 
-    const answer = readlineSync.question('T uespuesta:');
+    const answer = readlineSync.question('Tu respuesta:');
 
     const rigthAnswer = eval(pregunta);
 
