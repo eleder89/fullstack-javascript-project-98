@@ -33,7 +33,7 @@ const guesTheNumber = () => {
 
     console.log(`Pregunta: ${progression}`);
 
-    const answer = readlineSync.question('Respuesta: ');
+    const answer = readlineSync.question('Tu respuesta: ');
 
     const verifing = hideNumber == answer;
 

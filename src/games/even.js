@@ -22,7 +22,7 @@ const brainEven = () => {
     const value = randomNumber(1, 99);
     console.log(`Pregunta: ${value}`);
 
-    const answer = readlineSync.question('Respuesta:');
+    const answer = readlineSync.question('Tu respuesta:');
 
     const verifing = isEvenNumber(value, answer);
 

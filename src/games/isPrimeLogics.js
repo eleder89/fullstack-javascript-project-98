@@ -24,7 +24,7 @@ const brainPrime = () => {
     const value = randomNumber(5, 99);
     console.log(`Pregunta: ${value}`);
 
-    const answer = readlineSync.question('Respuesta: ');
+    const answer = readlineSync.question('Tu respuesta: ');
 
     const primeOrNot = isPrimeNumber(value);
 

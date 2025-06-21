@@ -17,7 +17,7 @@ const calcMcd = () => {
 
     console.log(`Pregunta: ${value1}, ${value2}`);
 
-    const answer = readlineSync.question('Respuesta: ');
+    const answer = readlineSync.question('Tu respuesta: ');
 
     const rigthAnswer = euclidian(value1, value2);
 
