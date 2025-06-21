@@ -56,6 +56,20 @@ function closer(answer, verifing, rigthAnswer, name1) {
   return false;
 }
 
+const operation = (operador, value1, value2) => {
+  let result;
+
+  if (operador === '+') {
+    result = value1 + value2;
+  } else if (operador === '-') {
+    result = value1 - value2;
+  } else if (operador === '*') {
+    result = value1 * value2
+  }
+
+  return result;
+};
+
 export {
-  check, randomNumber, euclidian, closer, welcome,
+  check, randomNumber, euclidian, closer, welcome, operation,
 };

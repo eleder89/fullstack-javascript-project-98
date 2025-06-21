@@ -21,7 +21,7 @@ const calcMcd = () => {
 
     const rigthAnswer = euclidian(value1, value2);
 
-    const verifing = rigthAnswer == answer;
+    const verifing = rigthAnswer.toString() === answer;
 
     if (closer(answer, verifing, rigthAnswer, name)) {
       break;

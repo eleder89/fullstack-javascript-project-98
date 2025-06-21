@@ -35,7 +35,7 @@ const guesTheNumber = () => {
 
     const answer = readlineSync.question('Tu respuesta: ');
 
-    const verifing = hideNumber == answer;
+    const verifing = hideNumber.toString() === answer;
 
     if (closer(answer, verifing, hideNumber, name)) {
       break;

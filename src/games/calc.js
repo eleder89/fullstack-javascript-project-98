@@ -1,5 +1,7 @@
 import readlineSync from 'readline-sync';
-import { welcome, closer, randomNumber } from './index.js';
+import {
+  welcome, closer, randomNumber, operation,
+} from './index.js';
 
 const brainCalc = () => {
   const name = welcome();
@@ -34,9 +36,9 @@ const brainCalc = () => {
 
     const answer = readlineSync.question('Tu respuesta:');
 
-    const rigthAnswer = eval(pregunta);
+    const rigthAnswer = operation(operador, value1, value2);
 
-    const verifing = answer == rigthAnswer;
+    const verifing = answer === rigthAnswer.toString();
 
     if (closer(answer, verifing, rigthAnswer, name)) {
       break;

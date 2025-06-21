@@ -30,7 +30,7 @@ const brainPrime = () => {
 
     const rigthAnswer = primeOrNot ? 'yes' : 'no';
 
-    const verifing = rigthAnswer == answer;
+    const verifing = rigthAnswer.toString() === answer;
 
     if (closer(answer, verifing, rigthAnswer, name)) {
       break;
