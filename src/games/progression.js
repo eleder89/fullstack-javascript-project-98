@@ -4,7 +4,7 @@ import { randomNumber, closer, welcome } from './index.js';
 const guesTheNumber = () => {
   const name = welcome();
 
-  console.log('¿Qué numero falta en la progresión?');
+  console.log('¿Qué número falta en la progresión?');
 
   let count = 3;
 
