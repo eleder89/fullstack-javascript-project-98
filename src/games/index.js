@@ -64,7 +64,7 @@ const operation = (operador, value1, value2) => {
   } else if (operador === '-') {
     result = value1 - value2;
   } else if (operador === '*') {
-    result = value1 * value2
+    result = value1 * value2;
   }
 
   return result;
