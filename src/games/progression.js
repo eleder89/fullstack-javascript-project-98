@@ -44,7 +44,7 @@ const guesTheNumber = () => {
     }
   }
   if (count === 0) {
-    console.log(`Felicidades ${name}!`);
+    console.log(`Felicidades, ${name}!`);
   }
 };
 
